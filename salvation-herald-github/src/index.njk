@@ -129,7 +129,7 @@ eleventyExcludeFromCollections: true
 
   var url = "https://api.open-meteo.com/v1/forecast?latitude=" + LAT +
             "&longitude=" + LON +
-            "&current=temperature_2m,weather_code&temperature_unit=fahrenheit" +
+            "&current=temperature_2m,weather_code&temperature_unit=celsius" +
             "&timezone=America/New_York";
   fetch(url)
     .then(function (r) { return r.json(); })
@@ -137,7 +137,7 @@ eleventyExcludeFromCollections: true
       var t = Math.round(d.current.temperature_2m);
       var code = d.current.weather_code;
       var desc = WMO[code] || "—";
-      document.getElementById("slv-weather").textContent = desc + ", " + t + "°F";
+      document.getElementById("slv-weather").textContent = desc + ", " + t + "°C";
     })
     .catch(function () {
       document.getElementById("slv-weather").textContent = "dati non disponibili";
