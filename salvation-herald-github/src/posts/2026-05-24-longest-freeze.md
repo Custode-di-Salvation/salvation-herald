@@ -3,7 +3,7 @@ title: "The Longest Freeze in Living Memory"
 date: 2026-05-24
 author: E. Marlowe, Staff Correspondent
 filed: May 24, 2026
-section: Local
+section: Cronaca
 deck: "No thaw in sight as the town enters its worst cold since the founding, and the roads to the county seat close for the season."
 image: "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=1000&q=60"
 imageAlt: "A snowed-in main street in a small mountain town"
