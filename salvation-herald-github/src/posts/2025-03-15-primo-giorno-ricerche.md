@@ -14,11 +14,6 @@ Il mattino del 14 marzo ha segnato l'inizio delle operazioni di ricerca seguite 
 
 All'alba, le squadre erano già sul terreno. L'area interessata è stata suddivisa tra il centro cittadino, i sentieri limitrofi a Main Street e l'intera fascia dei boschi che circondano l'abitato. Gli uomini dello sceriffo hanno coordinato le operazioni e presidiato le zone d'intervento; volontari e tecnici, muniti di radio e localizzatori, hanno spinto le ricerche oltre i sentieri battuti, dentro il fitto della vegetazione. Accanto a loro, le squadre cinofile, il cui fiuto resta lo strumento più affidabile su un terreno del genere.
 
-<figure class="article-figure">
-  <img src="https://www.akc.org/wp-content/uploads/2019/12/billie-howling.jpg" alt="Cane molecolare da ricerca">
-  <figcaption>Un cane molecolare impiegato nelle operazioni tra i boschi. — Herald photo</figcaption>
-</figure>
-
 «Il lavoro è cominciato con le prime luci», ha raccontato uno degli operatori. «Nonostante la luce fioca e il terreno difficile, ogni area è stata esaminata con attenzione per raccogliere qualsiasi indizio utile.» Alla fatica degli uomini si è aggiunta la tecnologia: droni con termocamere hanno sorvolato boschi e sentieri, cercando dall'alto le anomalie termiche che un corpo, o un movimento, lasciano dietro di sé.
 
 Il primo giorno, però, ha anche mostrato i suoi limiti. I boschi attorno a Salvation, con la loro vegetazione fitta e i sentieri poco battuti, hanno rallentato ogni spostamento e imposto la massima cautela. L'umidità e una lieve nebbia mattutina — quella nebbia che da queste parti non è mai davvero una sorpresa — hanno complicato i rilevamenti a vista, costringendo i soccorritori ad affidarsi agli strumenti più che agli occhi.
