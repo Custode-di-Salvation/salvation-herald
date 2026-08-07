@@ -4,7 +4,7 @@ date: 2025-01-31
 author: Eleanor Cash
 filed: 31 gennaio 2025
 section: Cronaca
-deck: "A poco più di un mese dalle dimissioni di Richard Locke, la contea ha scelto suo figlio Alden – trentotto anni, ex marine, nato e cresciuto in queste valli – per raccogliere un'eredità pesante e un distintivo che, per la prima volta, passa di padre in figlio."
+deck: "A poco più di un mese dalle dimissioni di Richard Locke, la contea ha scelto suo figlio Alden – trentotto anni, ex marine, nato e cresciuto in queste valli – per raccogliere un'eredità pesante e un distintivo che passa di padre in figlio."
 image: "https://i.imgur.com/btFVwdL.png"
 imageAlt: "Alden Locke, sceriffo, in divisa"
 imageCaption: "Alden Locke in divisa, il giorno dell'insediamento. — Herald photo"
