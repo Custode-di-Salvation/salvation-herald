@@ -1,0 +1,1 @@
+Metti qui le foto degli articoli. Poi richiamale con /img/nomefoto.jpg

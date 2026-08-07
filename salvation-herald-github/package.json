@@ -1,0 +1,12 @@
+{
+  "name": "salvation-herald",
+  "version": "1.0.0",
+  "description": "The Salvation Herald — the web edition of Salvation's newspaper of record.",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

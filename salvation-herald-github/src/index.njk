@@ -1,0 +1,99 @@
+---
+layout: base.njk
+permalink: /
+eleventyExcludeFromCollections: true
+---
+{% set posts = collections.articles %}
+{% set lead = posts[0] %}
+<div class="sheet">
+
+  <div class="top-strip">
+    <span>{{ site.volume }} &middot; {{ site.issue }}</span>
+    <span>Established {{ site.founded }} &middot; {{ site.county }}</span>
+    <span>Price {{ site.price }}</span>
+  </div>
+
+  <header class="masthead">
+    <div class="kicker">{{ site.kicker }}</div>
+    <h1><a href="/">{{ site.name }}</a></h1>
+    <div class="motto">&ldquo;{{ site.motto }}&rdquo;</div>
+    <div class="dateline">
+      <span>{{ site.place }}</span>
+      {% if lead %}<span>{{ lead.date | readableDate }}</span>{% endif %}
+      {% if lead.data.weather %}<span class="weather">Today &mdash; <b>{{ lead.data.weather }}</b></span>{% endif %}
+    </div>
+  </header>
+
+  <nav class="sections">
+    <a href="/">Front Page</a>
+    <a href="/">Local</a>
+    <a href="/">The Lake</a>
+    <a href="/">Obituaries</a>
+    <a href="/">Notices</a>
+    <a href="/">Opinion</a>
+    <a href="#archive">Archive</a>
+  </nav>
+
+  {% if lead %}
+  <div class="lead-grid">
+    <div class="main">
+      {% if lead.data.section %}<div class="eyebrow">{{ lead.data.section }}</div>{% endif %}
+      <h2 class="lead-title"><a href="{{ lead.url }}">{{ lead.data.title }}</a></h2>
+      {% if lead.data.deck %}<p class="lead-sub">{{ lead.data.deck }}</p>{% endif %}
+      <div class="byline">By {{ lead.data.author }}{% if lead.data.filed %} &nbsp;&bull;&nbsp; Filed {{ lead.data.filed }}{% endif %}</div>
+      {% if lead.data.image %}
+      <figure class="lead-fig">
+        <img src="{{ lead.data.image }}" alt="{{ lead.data.imageAlt or lead.data.title }}">
+        {% if lead.data.imageCaption %}<figcaption>{{ lead.data.imageCaption }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+      <div class="body-cols">{{ lead.templateContent | safe }}</div>
+    </div>
+
+    <aside class="rail">
+      <h3>Also This Week</h3>
+      {% for post in posts.slice(1, 5) %}
+      <div class="rail-item">
+        <a href="{{ post.url }}">
+          {% if post.data.section %}<div class="k">{{ post.data.section }}</div>{% endif %}
+          <h4>{{ post.data.title }}</h4>
+          {% if post.data.deck %}<p>{{ post.data.deck }}</p>{% endif %}
+        </a>
+      </div>
+      {% endfor %}
+    </aside>
+  </div>
+  {% endif %}
+
+  {% if posts.length > 5 %}
+  <hr class="divider">
+  <div class="three">
+    {% for post in posts.slice(5, 8) %}
+    <article>
+      {% if post.data.section %}<div class="k">{{ post.data.section }}</div>{% endif %}
+      <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>
+      {% if post.data.deck %}<p>{{ post.data.deck }}</p>{% endif %}
+      <div class="meta">{{ post.data.section }} &middot; {{ post.date | shortDate }}</div>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <section class="archive" id="archive">
+    <h3>From the Archive &mdash; Past Editions</h3>
+    <div class="arch-list">
+      {% for post in posts %}
+      <div class="arch-row">
+        <span class="date">{{ post.date | shortDate }}</span>
+        <span class="t"><a href="{{ post.url }}">{{ post.data.title }}{% if post.data.section %}<span class="sec">{{ post.data.section }}</span>{% endif %}</a></span>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <footer class="paper">
+    <div>{{ site.name }} &middot; <span class="em">{{ site.place }}</span> &middot; {{ site.county }}</div>
+    <div>Published since {{ site.founded }} &middot; Letters to the editor: {{ site.email }}</div>
+  </footer>
+
+</div>

@@ -1,0 +1,40 @@
+---
+layout: base.njk
+---
+<div class="sheet narrow">
+
+  <div class="mini">
+    <a href="/" class="name">{{ site.name }}</a>
+    <span>{{ site.place }} &middot; {{ site.volume }} {{ site.issue }} &middot; {{ date | shortDate }}</span>
+  </div>
+
+  <div class="backbar"><a href="/">&larr; Back to the Front Page</a>{% if section %} &nbsp;&middot;&nbsp; {{ section }}{% endif %}</div>
+
+  <article>
+    {% if section %}<div class="eyebrow">{{ section }}</div>{% endif %}
+    <h1 class="head">{{ title }}</h1>
+    {% if deck %}<p class="deck">{{ deck }}</p>{% endif %}
+    <div class="byline full">
+      <span>By {{ author }}</span>
+      <span>{% if filed %}Filed {{ filed }} &middot; {% endif %}{{ site.place }}</span>
+    </div>
+
+    {% if image %}
+    <figure class="article-figure">
+      <img src="{{ image }}" alt="{{ imageAlt or title }}">
+      {% if imageCaption %}<figcaption>{{ imageCaption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="article-body">
+      {{ content | safe }}
+      <div class="end">&mdash; 30 &mdash;</div>
+    </div>
+  </article>
+
+  <footer class="paper">
+    <div>{{ site.name }} &middot; {{ site.place }} &middot; {{ site.county }}</div>
+    <div>Published since {{ site.founded }} &middot; <a href="/">Return to the Front Page</a></div>
+  </footer>
+
+</div>
