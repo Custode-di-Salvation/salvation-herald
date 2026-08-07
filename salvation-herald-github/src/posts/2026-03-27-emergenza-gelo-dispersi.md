@@ -1,0 +1,21 @@
+---
+title: "Emergenza gelo: centinaia di dispersi nella tempesta"
+date: 2026-03-27
+author: Delphine Mercer
+filed: 27 marzo 2026
+section: Cronaca
+deck: "Un'ondata di gelo senza precedenti ha trasformato la valle in una trappola di ghiaccio a partire dalle 13:13 di ieri. Il Consiglio Cittadino ha dichiarato lo stato di emergenza. Tra le centinaia di dispersi figurano anche lo sceriffo e il vicesceriffo."
+image: "https://i.imgur.com/kftP9gr.jpeg"
+imageAlt: "Un agente del Dipartimento dello Sceriffo affigge i cartelli del coprifuoco"
+imageCaption: "Un agente del DSS affigge i cartelli del coprifuoco lungo Main Street. — Herald photo"
+---
+
+Un'ondata di gelo anomala e senza precedenti ha colpito la nostra cittadina, portando con sé non solo temperature polari, ma una crisi profonda per l'intera comunità. A partire dalle ore 13:13 di ieri, 26 marzo, un brusco crollo delle temperature ha trasformato la valle in una trappola di ghiaccio. Il fenomeno, descritto dagli esperti come un raro effetto whiteout provocato dalla densa cappa lattiginosa scesa dal cielo nelle scorse settimane, ha azzerato la visibilità, cancellato le ombre e paralizzato le strade, portando in pieno giorno la superficie del Cauldron Lake a un congelamento lampo.
+
+Nelle ore successive, contando le assenze, le autorità hanno delineato la portata del disastro: al momento centinaia di persone risultano disperse. Tra loro residenti storici e numerosi pellegrini accampati all'Hackett's Camp, che già dopo la Festa del Cervo aveva superato ogni limite di capienza. E la redazione del Salvation Herald si unisce all'apprensione della città nel dare una notizia che pesa più di tutte: tra i dispersi figurano anche il nostro sceriffo, Alden Locke, e il vicesceriffo. Le prime ricostruzioni li collocano nei pressi del Cauldron Lake, dove stavano coordinando l'evacuazione dei campeggiatori sorpresi dal gelo, poco prima che i contatti con la centrale si interrompessero.
+
+L'assenza di tracce sul terreno e di chiari segni di fuga ha alimentato tra alcuni residenti un panico che riteniamo del tutto ingiustificato. Le autorità invitano alla calma e alla razionalità, e le loro parole meritano ascolto. I soccorritori montani ricordano che l'effetto whiteout annulla completamente la percezione della prospettiva e dell'orientamento: è più che probabile che i dispersi, sorpresi all'aperto dal crollo termico improvviso e accecati dalla nebbia, abbiano semplicemente perso la strada nei boschi o lungo le rive scivolose del lago. A questo si aggiunge che, viste le condizioni ormai insostenibili dell'Hackett's Camp, è del tutto plausibile che molti dei nuovi arrivati abbiano abbandonato in fretta i loro alloggi di fortuna, a piedi o cercando un passaggio, senza avvisare nessuno, nel tentativo disperato di sfuggire al freddo. Spiegazioni semplici, umane, che restituiscono un ordine a ciò che a prima vista può sembrare inspiegabile.
+
+Di fronte alla crisi, il Consiglio Cittadino si è riunito in seduta straordinaria e ha assunto i poteri d'emergenza previsti dal nostro Statuto storico. Da questo momento è dichiarato lo Stato di Emergenza sull'intero territorio di Salvation. È in vigore il coprifuoco: vietato circolare per strade rese impraticabili dal ghiaccio e ingombre di veicoli in panne. Viveri e combustibile saranno razionati per garantire la sopravvivenza della comunità finché i collegamenti con la contea non saranno ripristinati. Il Consiglio ha inoltre già provveduto a nominare uno sceriffo ad interim, per mantenere saldo l'ordine pubblico nell'assenza di Locke.
+
+Le autorità sconsigliano nel modo più assoluto di addentrarsi nella zona del Cauldron Lake — ora dichiarata zona rossa — o nei boschi alla ricerca dei propri cari: con queste temperature, ogni esplorazione non autorizzata è un rischio fatale. Affidatevi alle squadre coordinate dal nuovo sceriffo ad interim. Salvation ha superato inverni durissimi in passato, e lo ricordiamo non per retorica ma per fatto. Manteniamo la calma, restiamo al sicuro nelle nostre case, e dimostriamo lo spirito forte che da sempre ci contraddistingue. Il Salvation Herald continuerà a informare la cittadinanza con nuove edizioni non appena le comunicazioni torneranno stabili.
