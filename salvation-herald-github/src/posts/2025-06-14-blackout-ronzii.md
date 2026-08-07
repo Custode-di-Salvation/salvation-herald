@@ -5,7 +5,7 @@ author: Robin Schuman
 filed: 14 giugno 2025
 section: Cronaca
 deck: "Da settimane Salvation fa i conti con blackout insolitamente frequenti e regolari, accompagnati da un basso ronzio percepibile nell'aria. La Salvation Power & Light parla di trasformatori vecchi e relè di protezione. Alcuni residenti non sono così sicuri."
-image: "https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?auto=format&fit=crop&w=1000&q=60"
+image: "https://imgur.com/BhG4aLB"
 imageAlt: "Un quartiere residenziale al buio durante un blackout"
 imageCaption: "Salvation Ridge al buio durante una delle interruzioni. — Herald photo"
 ---
