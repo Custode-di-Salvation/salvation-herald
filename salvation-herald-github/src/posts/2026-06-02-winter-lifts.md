@@ -3,7 +3,7 @@ title: "Winter Lifts in a Single Hour; Some of the Missing Come Home"
 date: 2026-06-02
 author: E. Marlowe, Staff Correspondent
 filed: June 2, 2026
-section: The Thaw
+section: Il Disgelo
 deck: "At 1:14 p.m. on May 26 the cold broke all at once. Cauldron Lake began to move again, the fog thinned, and by nightfall the streets ran with meltwater — and the first returning faces."
 weather: "Clear, 71°F after the thaw"
 image: "https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=1000&q=60"
