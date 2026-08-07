@@ -9,8 +9,8 @@ eleventyExcludeFromCollections: true
 
   <div class="top-strip">
     <span>{{ site.volume }} &middot; {{ site.issue }}</span>
-    <span>Established {{ site.founded }} &middot; {{ site.county }}</span>
-    <span>Price {{ site.price }}</span>
+    <span>Fondato nel {{ site.founded }} &middot; Contea di {{ site.county }}</span>
+    <span>Prezzo {{ site.price }}</span>
   </div>
 
   <header class="masthead">
@@ -19,19 +19,19 @@ eleventyExcludeFromCollections: true
     <div class="motto">&ldquo;{{ site.motto }}&rdquo;</div>
     <div class="dateline">
       <span>{{ site.place }}</span>
-      {% if lead %}<span>{{ lead.date | readableDate }}</span>{% endif %}
-      {% if lead.data.weather %}<span class="weather">Today &mdash; <b>{{ lead.data.weather }}</b></span>{% endif %}
+      <span id="slv-date" data-fallback="{% if lead %}{{ lead.date | readableDate }}{% endif %}">&mdash;</span>
+      <span class="weather">Oggi &mdash; <b id="slv-weather">&mdash;</b></span>
     </div>
   </header>
 
   <nav class="sections">
-    <a href="/">Front Page</a>
-    <a href="/">Local</a>
-    <a href="/">The Lake</a>
-    <a href="/">Obituaries</a>
-    <a href="/">Notices</a>
-    <a href="/">Opinion</a>
-    <a href="#archive">Archive</a>
+    <span>Prima Pagina</span>
+    <span>Cronaca</span>
+    <span>Il Lago</span>
+    <span>Necrologi</span>
+    <span>Avvisi</span>
+    <span>Opinioni</span>
+    <span>Archivio</span>
   </nav>
 
   {% if lead %}
@@ -40,7 +40,7 @@ eleventyExcludeFromCollections: true
       {% if lead.data.section %}<div class="eyebrow">{{ lead.data.section }}</div>{% endif %}
       <h2 class="lead-title"><a href="{{ lead.url }}">{{ lead.data.title }}</a></h2>
       {% if lead.data.deck %}<p class="lead-sub">{{ lead.data.deck }}</p>{% endif %}
-      <div class="byline">By {{ lead.data.author }}{% if lead.data.filed %} &nbsp;&bull;&nbsp; Filed {{ lead.data.filed }}{% endif %}</div>
+      <div class="byline">Di {{ lead.data.author }}{% if lead.data.filed %} &nbsp;&bull;&nbsp; Pubblicato il {{ lead.date | readableDate }}{% endif %}</div>
       {% if lead.data.image %}
       <figure class="lead-fig">
         <img src="{{ lead.data.image }}" alt="{{ lead.data.imageAlt or lead.data.title }}">
@@ -51,7 +51,7 @@ eleventyExcludeFromCollections: true
     </div>
 
     <aside class="rail">
-      <h3>Also This Week</h3>
+      <h3>Questa Settimana</h3>
       {% for post in posts.slice(1, 5) %}
       <div class="rail-item">
         <a href="{{ post.url }}">
@@ -80,7 +80,7 @@ eleventyExcludeFromCollections: true
   {% endif %}
 
   <section class="archive" id="archive">
-    <h3>From the Archive &mdash; Past Editions</h3>
+    <h3>Dall&rsquo;Archivio &mdash; Edizioni Precedenti</h3>
     <div class="arch-list">
       {% for post in posts %}
       <div class="arch-row">
@@ -92,8 +92,55 @@ eleventyExcludeFromCollections: true
   </section>
 
   <footer class="paper">
-    <div>{{ site.name }} &middot; <span class="em">{{ site.place }}</span> &middot; {{ site.county }}</div>
-    <div>Published since {{ site.founded }} &middot; Letters to the editor: {{ site.email }}</div>
+    <div>{{ site.name }} &middot; <span class="em">{{ site.place }}</span> &middot; Contea di {{ site.county }}</div>
+    <div>Pubblicato dal {{ site.founded }} &middot; Lettere alla redazione: {{ site.email }}</div>
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var LAT = {{ site.lat }}, LON = {{ site.lon }};
+
+  var WMO = {
+    0: "Sereno", 1: "Prevalentemente sereno", 2: "Parz. nuvoloso", 3: "Coperto",
+    45: "Nebbia", 48: "Nebbia gelata",
+    51: "Pioviggine leggera", 53: "Pioviggine", 55: "Pioviggine intensa",
+    56: "Pioviggine gelata", 57: "Pioviggine gelata intensa",
+    61: "Pioggia debole", 63: "Pioggia", 65: "Pioggia forte",
+    66: "Pioggia gelata", 67: "Pioggia gelata forte",
+    71: "Neve debole", 73: "Neve", 75: "Neve intensa", 77: "Nevischio",
+    80: "Rovesci deboli", 81: "Rovesci", 82: "Rovesci violenti",
+    85: "Rovesci di neve", 86: "Rovesci di neve intensi",
+    95: "Temporale", 96: "Temporale con grandine", 99: "Temporale forte con grandine"
+  };
+
+  function capWords(s){ return s.replace(/(^|\s)\S/g, function(m){ return m.toUpperCase(); }); }
+  var dateEl = document.getElementById("slv-date");
+  try {
+    var today = new Date().toLocaleDateString("it-IT", {
+      weekday: "long", year: "numeric", month: "long", day: "numeric",
+      timeZone: "America/New_York"
+    });
+    dateEl.textContent = capWords(today);
+  } catch (e) {
+    if (dateEl.dataset.fallback) dateEl.textContent = dateEl.dataset.fallback;
+  }
+
+  var url = "https://api.open-meteo.com/v1/forecast?latitude=" + LAT +
+            "&longitude=" + LON +
+            "&current=temperature_2m,weather_code&temperature_unit=fahrenheit" +
+            "&timezone=America/New_York";
+  fetch(url)
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var t = Math.round(d.current.temperature_2m);
+      var code = d.current.weather_code;
+      var desc = WMO[code] || "—";
+      document.getElementById("slv-weather").textContent = desc + ", " + t + "°F";
+    })
+    .catch(function () {
+      document.getElementById("slv-weather").textContent = "dati non disponibili";
+    });
+})();
+</script>
