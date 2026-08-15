@@ -23,9 +23,31 @@ module.exports = function (eleventyConfig) {
     }));
   });
 
+  // Filtro data per RSS (RFC3339)
+  eleventyConfig.addFilter("dateToRfc3339", (value) => {
+    const d = value instanceof Date ? value : new Date(value);
+    return d.toISOString();
+  });
+
   // Collezione "articles": tutti i post, dal più recente al più vecchio.
   eleventyConfig.addCollection("articles", (collectionApi) => {
     return collectionApi.getFilteredByTag("article").sort((a, b) => b.date - a.date);
+  });
+
+  // Collezione "frontPageArticles": seleziona il primo articolo valido come lead (escludendo hideFromHome)
+  // e restituisce il resto (incluso l'oroscopo) per la colonna di destra e la sezione inferiore.
+  eleventyConfig.addCollection("frontPageArticles", (collectionApi) => {
+    const all = collectionApi.getFilteredByTag("article").sort((a, b) => b.date - a.date);
+    const lead = all.find(item => !item.data.hideFromHome);
+    const remaining = all.filter(item => item.url !== (lead ? lead.url : null));
+    return { lead, remaining };
+  });
+
+  // Collezione "feedAll": unisce gli articoli alle pagine aggiornabili (es. necrologi, avvisi)
+  eleventyConfig.addCollection("feedAll", (collectionApi) => {
+    const articles = collectionApi.getFilteredByTag("article");
+    const updates = collectionApi.getFilteredByTag("feedUpdate");
+    return [...articles, ...updates].sort((a, b) => b.date - a.date);
   });
 
   return {

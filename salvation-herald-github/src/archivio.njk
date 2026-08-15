@@ -1,0 +1,116 @@
+---
+layout: article.njk
+title: "Archivio storico"
+author: "Redazione"
+deck: "Cerca tra tutti gli articoli pubblicati dal Salvation Herald."
+permalink: "/archivio/"
+---
+
+<div style="margin-bottom: 30px; display: flex; gap: 10px; align-items: center;">
+  <input type="text" id="searchInput" placeholder="Cerca un nome, un luogo o una parola chiave..." style="flex: 1; padding: 14px; font-size: 18px; font-family: var(--body); border: 2px solid var(--rule); background: var(--paper-2); color: var(--ink);">
+  <select id="monthSelect" style="padding: 14px; font-size: 16px; font-family: var(--body); border: 2px solid var(--rule); background: var(--paper-2); color: var(--ink); cursor: pointer;">
+    <option value="">Tutti i mesi</option>
+  </select>
+</div>
+
+<div id="searchResults" class="arch-list" style="display: flex; flex-direction: column; gap: 10px;">
+  <!-- I risultati verranno inseriti qui -->
+  <p style="font-family: var(--body); font-style: italic; color: var(--ink-soft);">Caricamento archivio in corso...</p>
+</div>
+
+<script>
+  let articles = [];
+
+    fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      articles = data;
+      populateMonthSelect();
+      const searchParams = new URLSearchParams(window.location.search);
+      const initialQuery = searchParams.get('q');
+      if (initialQuery) {
+        document.getElementById('searchInput').value = initialQuery;
+      }
+      filterAndRender();
+    })
+    .catch(error => {
+      document.getElementById('searchResults').innerHTML = '<p style="color:var(--accent);">Errore nel caricamento dell\'archivio.</p>';
+    });
+
+  const searchInput = document.getElementById('searchInput');
+  const monthSelect = document.getElementById('monthSelect');
+  const resultsContainer = document.getElementById('searchResults');
+
+  searchInput.addEventListener('input', filterAndRender);
+  monthSelect.addEventListener('change', filterAndRender);
+
+  function populateMonthSelect() {
+    const monthsMap = new Map();
+    // Estrae i mesi in formato YYYY-MM
+    articles.forEach(article => {
+      if (!article.isoDate) return;
+      const d = new Date(article.isoDate);
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const key = `${yyyy}-${mm}`;
+      const label = d.toLocaleDateString("it-IT", { month: "long", year: "numeric", timeZone: "UTC" });
+      if (!monthsMap.has(key)) {
+        monthsMap.set(key, label.charAt(0).toUpperCase() + label.slice(1));
+      }
+    });
+
+    // Ordina decrescente
+    const sortedKeys = Array.from(monthsMap.keys()).sort().reverse();
+    sortedKeys.forEach(key => {
+      const option = document.createElement('option');
+      option.value = key;
+      option.textContent = monthsMap.get(key);
+      monthSelect.appendChild(option);
+    });
+  }
+
+  function filterAndRender() {
+    const query = searchInput.value.toLowerCase().trim();
+    const selectedMonth = monthSelect.value;
+    
+    let filtered = articles;
+
+    if (query !== '') {
+      filtered = filtered.filter(article => {
+        return (article.title && article.title.toLowerCase().includes(query)) ||
+               (article.content && article.content.toLowerCase().includes(query)) ||
+               (article.section && article.section.toLowerCase().includes(query));
+      });
+    }
+
+    if (selectedMonth !== '') {
+      filtered = filtered.filter(article => {
+        if (!article.isoDate) return false;
+        return article.isoDate.startsWith(selectedMonth);
+      });
+    }
+
+    renderResults(filtered);
+  }
+
+  function renderResults(results) {
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<p style="font-family: var(--body); color: var(--ink-soft);">Nessun articolo trovato.</p>';
+      return;
+    }
+
+    const html = results.map(post => {
+      const sectionHtml = post.section ? `<span class="sec" style="font-family:var(--label); font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-left:8px;">${post.section}</span>` : '';
+      return `
+        <div class="arch-row" style="display:flex; gap:14px; align-items:baseline; border-bottom:1px solid var(--rule-soft); padding:9px 0;">
+          <span class="date" style="font-family:var(--label); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-mute); min-width:96px; flex-shrink:0;">${post.date}</span>
+          <span class="t" style="font-family:var(--body); font-size:16px; line-height:1.3;">
+            <a href="${post.url}" style="text-decoration:none; color:var(--ink);" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink)'">${post.title}${sectionHtml}</a>
+          </span>
+        </div>
+      `;
+    }).join('');
+
+    resultsContainer.innerHTML = html;
+  }
+</script>

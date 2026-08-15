@@ -7,7 +7,7 @@ section: Cronaca
 deck: "La fontana del municipio ha spruzzato fango, un vecchio telefono pubblico ha squillato di notte con brusii di voci. Due curiosità cittadine che le autorità hanno prontamente chiarito: una valvola difettosa, interferenze sulla linea. Nulla che debba togliere il sonno ai residenti."
 image: "https://i.imgur.com/32XBndI.png"
 imageAlt: "La fontana davanti al municipio che spruzza fango"
-imageCaption: "La fontana davanti al municipio nell'istante in cui ha spruzzato fango. — Herald photo"
+imageCaption: "La fontana davanti al municipio nell'istante in cui ha spruzzato fango. – Herald photo"
 ---
 
 Nelle scorse settimane un paio di curiosità cittadine hanno alimentato qualche chiacchiera in centro, più per la loro stranezza che per una reale gravità. La fontana davanti al municipio che, per qualche istante, ha spruzzato fango invece d'acqua; e un vecchio telefono pubblico che, di notte, ha preso a squillare trasmettendo brusii indistinti. Episodi che, come spesso accade, hanno trovato in fretta una spiegazione ordinaria.

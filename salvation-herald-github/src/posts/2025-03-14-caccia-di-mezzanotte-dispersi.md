@@ -7,10 +7,10 @@ section: Cronaca
 deck: "Quella che doveva essere la notte più attesa dell'anno si è chiusa nel buio e nel silenzio: almeno una decina di persone, tra residenti e visitatori, risultano scomparse dopo l'accensione della grande pira in Main Street. Le ricerche sono in corso dalle prime ore del mattino."
 image: "https://i.pinimg.com/736x/74/6f/89/746f8935765a54c7480c4377e5c13ad8.jpg"
 imageAlt: "Main Street durante la Caccia di mezzanotte"
-imageCaption: "Main Street durante la Caccia di Mezzanotte, poco prima dell'incidente. — Herald photo"
+imageCaption: "Main Street durante la Caccia di Mezzanotte, poco prima dell'incidente. – Herald photo"
 ---
 
-La Caccia di Mezzanotte, il rituale che ogni anno intreccia il folklore locale alle tradizioni più antiche di Salvation, si è trasformata questa notte in una delle pagine più cupe della recente storia cittadina. Nei minuti successivi all'accensione della grande pira in Main Street, almeno una decina di persone — cittadini e visitatori — sono scomparse, e all'alba risultavano ancora irreperibili.
+La Caccia di Mezzanotte, il rituale che ogni anno intreccia il folklore locale alle tradizioni più antiche di Salvation, si è trasformata questa notte in una delle pagine più cupe della recente storia cittadina. Nei minuti successivi all'accensione della grande pira in Main Street, almeno una decina di persone – cittadini e visitatori – sono scomparse, e all'alba risultavano ancora irreperibili.
 
 Fino a quel momento la serata aveva seguito il suo corso consueto: musica country, balli, il tepore di una comunità stretta attorno al fuoco. Poi qualcosa è andato storto. Diversi testimoni riferiscono di un improvviso, violento innalzarsi delle fiamme, uno spettacolo che ha lasciato la folla senza fiato per un istante e che, secondo le prime ricostruzioni delle autorità, sarebbe stato provocato da una reazione accidentale legata alla composizione del combustibile e a particolari condizioni ambientali.
 

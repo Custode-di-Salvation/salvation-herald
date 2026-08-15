@@ -1,0 +1,33 @@
+{
+  "annunci": [
+    "Compro rottami metallici e batterie per auto. Ritiro a domicilio gratuito.",
+    "Cercasi ragazzo robusto per spaccare legna nel weekend. Paga oraria o baratto con conserve.",
+    "Cercasi compagno per battute di pesca la domenica mattina. Requisito: barca propria."
+  ],
+  "eventi": [
+    "Corso di cucito e uncinetto per principianti - Tutti i giovedì pomeriggio alla Salvation Public Library.",
+    "Gruppo di preghiera del martedì - Ore 18:00 alla First Methodist Church of Salvation.",
+    "Methodist Apple Pie Social - Domenica mattina nel piazzale della First Methodist Church of Salvation."
+  ],
+  "film": "The Wizard of Oz (1939)",
+  "recaps": [
+    "Bucks 10 - Grafton 10",
+    "Bucks 24 - Davis 7"
+  ],
+  "blotter": [
+    "14:20 - Veicolo in panne lungo la Route 9. Il conducente, disorientato a causa di un colpo di calore, si era incamminato in cerca di segnale telefonico. Soccorso con successo dal medico condotto.",
+    "15:30 - Segnalazione sparizione animali domestici a The Hollow. Si raccomanda ai residenti di rinforzare i recinti per via dell'aumentata attività di volpi e coyote."
+  ],
+  "pesca": {
+    "temp": "14°C (termoclino 2m)",
+    "clarity": "Nera (buio totale)",
+    "bass": "Discreto a galla",
+    "trout": "Attive a 15-30m",
+    "bait": "Deep crankbaits"
+  },
+  "foresta": {
+    "inc": "Basso (alta umidità)",
+    "fauna": "Allerta orsi neri",
+    "trails": "Zanzare e zecche"
+  }
+}

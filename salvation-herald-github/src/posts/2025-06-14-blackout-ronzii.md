@@ -7,7 +7,7 @@ section: Cronaca
 deck: "Da settimane Salvation fa i conti con blackout insolitamente frequenti, accompagnati da un basso ronzio nell'aria. La Salvation Power & Light spiega: trasformatori di vecchia generazione e relè di protezione. Nulla di cui allarmarsi, assicurano la società e le autorità."
 image: "https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?auto=format&fit=crop&w=1000&q=60"
 imageAlt: "Un quartiere residenziale al buio durante un blackout"
-imageCaption: "Salvation Ridge al buio durante una delle interruzioni. — Herald photo"
+imageCaption: "Salvation Ridge al buio durante una delle interruzioni. – Herald photo"
 ---
 
 Negli ultimi tempi la città ha registrato un netto aumento delle segnalazioni di blackout: interruzioni insolitamente frequenti, che tornano quasi a intervalli regolari, e che in molti casi si accompagnano a un basso ronzio avvertibile nell'aria. Un dettaglio, quest'ultimo, che più delle interruzioni in sé ha messo in allarme alcuni residenti, spingendo la Salvation Power & Light a un'indagine condotta insieme alle autorità locali.

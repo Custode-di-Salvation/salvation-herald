@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "The Salvation Herald — the web edition of Salvation's newspaper of record.",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "start": "node scripts/generate-horoscope.js && node scripts/generate-sidebar.js && eleventy --serve",
+    "build": "node scripts/generate-horoscope.js && node scripts/generate-sidebar.js && eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"

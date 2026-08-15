@@ -1,0 +1,108 @@
+{
+  "id": "cw-2",
+  "width": 5,
+  "height": 5,
+  "cells": [
+    [
+      {
+        "num": 1,
+        "answer": "L"
+      },
+      {
+        "answer": "U"
+      },
+      {
+        "num": 2,
+        "answer": "P"
+      },
+      {
+        "answer": "O"
+      },
+      {
+        "black": true
+      }
+    ],
+    [
+      {
+        "answer": "A"
+      },
+      {
+        "black": true
+      },
+      {
+        "answer": "A"
+      },
+      {
+        "black": true
+      },
+      {
+        "black": true
+      }
+    ],
+    [
+      {
+        "num": 3,
+        "answer": "G"
+      },
+      {
+        "answer": "O"
+      },
+      {
+        "answer": "L"
+      },
+      {
+        "answer": "F"
+      },
+      {
+        "num": 4,
+        "answer": "O"
+      }
+    ],
+    [
+      {
+        "answer": "O"
+      },
+      {
+        "black": true
+      },
+      {
+        "answer": "C"
+      },
+      {
+        "black": true
+      },
+      {
+        "answer": "S"
+      }
+    ],
+    [
+      {
+        "black": true
+      },
+      {
+        "num": 5,
+        "answer": "S"
+      },
+      {
+        "answer": "O"
+      },
+      {
+        "answer": "L"
+      },
+      {
+        "answer": "E"
+      }
+    ]
+  ],
+  "across": {
+    "1": "Ulula alla luna piena",
+    "3": "Un'insenatura della costa",
+    "5": "Speriamo di vederlo spuntare domattina"
+  },
+  "down": {
+    "1": "Lo specchio d'acqua a nord della città",
+    "2": "Dove si esibiscono i musicisti alla fiera",
+    "4": "Le ossa (al singolare, latino)"
+  },
+  "monthName": "Agosto"
+}

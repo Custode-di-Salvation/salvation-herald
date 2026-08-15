@@ -1,0 +1,27 @@
+---
+permalink: "/feed.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url or 'https://salvation-herald.netlify.app' }}/">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.motto }}</subtitle>
+  <link href="{{ site.url or 'https://salvation-herald.netlify.app' }}/feed.xml" rel="self"/>
+  <link href="{{ site.url or 'https://salvation-herald.netlify.app' }}/"/>
+  <updated>{{ collections.feedAll[0].date | dateToRfc3339 }}</updated>
+  <id>{{ site.url or 'https://salvation-herald.netlify.app' }}/</id>
+  <author>
+    <name>{{ site.name }} Redazione</name>
+  </author>
+  {% for post in collections.feedAll %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ site.url or 'https://salvation-herald.netlify.app' }}{{ post.url }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ site.url or 'https://salvation-herald.netlify.app' }}{{ post.url }}</id>
+    <content type="html"><![CDATA[
+      {{ post.templateContent | safe }}
+    ]]></content>
+  </entry>
+  {% endfor %}
+</feed>

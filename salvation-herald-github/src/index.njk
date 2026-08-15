@@ -3,13 +3,22 @@ layout: base.njk
 permalink: /
 eleventyExcludeFromCollections: true
 ---
-{% set posts = collections.articles %}
-{% set lead = posts[0] %}
+{% set lead = collections.frontPageArticles.lead %}
+{% set remainingPosts = collections.frontPageArticles.remaining %}
 <div class="sheet">
+
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="ticker-item">Traffico deviato sulla Statale 219 per lavori di riasfaltatura</span>
+      <span class="ticker-item">Si raccomanda di non lasciare bidoni dell'immondizia aperti nelle zone boschive per evitare l'avvicinamento di orsi</span>
+      <span class="ticker-item">Segnalati disservizi telefonici nell'area del Lago. I tecnici sono al lavoro</span>
+      <span class="ticker-item">Il Comune approva i fondi per la manutenzione straordinaria della Salvation Public Library</span>
+    </div>
+  </div>
 
   <div class="top-strip">
     <span>{{ site.volume }} &middot; {{ site.issue }}</span>
-    <span>Fondato nel {{ site.founded }} &middot; Contea di {{ site.county }}</span>
+    <span>Fondato nel {{ site.founded }} &middot; City-County of {{ site.county }}</span>
     <span>Prezzo {{ site.price }}</span>
   </div>
 
@@ -20,18 +29,20 @@ eleventyExcludeFromCollections: true
     <div class="dateline">
       <span>{{ site.place }}</span>
       <span id="slv-date" data-fallback="{% if lead %}{{ lead.date | readableDate }}{% endif %}">&mdash;</span>
-      <span class="weather">Oggi &mdash; <b id="slv-weather">&mdash;</b></span>
+      <span class="weather">Oggi &mdash; <b id="slv-weather">&mdash;</b> &middot; <span id="moon-phase-widget" style="font-weight:normal; text-transform:uppercase;"></span></span>
     </div>
   </header>
 
   <nav class="sections">
-    <span>Prima Pagina</span>
-    <span>Cronaca</span>
-    <span>Il Lago</span>
-    <span>Necrologi</span>
-    <span>Avvisi</span>
-    <span>Opinioni</span>
-    <span>Archivio</span>
+    <a href="/">Prima pagina</a>
+    <a href="/archivio/?q=cronaca">Cronaca</a>
+    <a href="/archivio/?q=comunit%C3%A0">Comunità</a>
+    <a href="/archivio/?q=costume">Costume</a>
+    <a href="/necrologi/">Necrologi</a>
+    <a href="/avvisi/">Avvisi</a>
+    <a href="/segnalazioni/">Segnalazioni</a>
+    <a href="/archivio/">Archivio</a>
+    <a href="/feed.xml">RSS</a>
   </nav>
 
   {% if lead %}
@@ -51,8 +62,79 @@ eleventyExcludeFromCollections: true
     </div>
 
     <aside class="rail">
-      <h3>Questa Settimana</h3>
-      {% for post in posts.slice(1, 5) %}
+      
+      <div class="rail-cta" style="margin-bottom:24px; font-family:var(--serif);">
+        <h3><i class="fa-solid fa-fish" style="margin-right:6px;"></i>Bollettino Cauldron Lake</h3>
+        <div style="font-size:13px; line-height:1.4;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; border-bottom:1px dashed var(--rule-soft); padding-bottom:4px;">
+            <b>Temp. Acqua:</b> <span>{{ sidebar.pesca.temp }}</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; border-bottom:1px dashed var(--rule-soft); padding-bottom:4px;">
+            <b>Visibilità:</b> <span>{{ sidebar.pesca.clarity }}</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; border-bottom:1px dashed var(--rule-soft); padding-bottom:4px;">
+            <b>Persico:</b> <span>{{ sidebar.pesca.bass }}</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <b>Trota:</b> <span>{{ sidebar.pesca.trout }}</span>
+          </div>
+          <div style="padding-top:8px; border-top:1px dashed var(--rule-soft); text-align:center; font-size:13px;">
+            <i>Esche:</i> {{ sidebar.pesca.bait }}
+          </div>
+        </div>
+      </div>
+
+      <div class="rail-cta" style="margin-bottom:24px; font-family:var(--serif);">
+        <h3><i class="fa-solid fa-tree" style="margin-right:6px;"></i>Blackwater N. Forest</h3>
+        <div style="font-size:13px; line-height:1.4;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; border-bottom:1px dashed var(--rule-soft); padding-bottom:4px;">
+            <b>Incendi:</b> <span style="text-align: right;">{{ sidebar.foresta.inc }}</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; border-bottom:1px dashed var(--rule-soft); padding-bottom:4px;">
+            <b>Fauna:</b> <span style="text-align: right;">{{ sidebar.foresta.fauna }}</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <b>Sentieri:</b> <span style="text-align: right;">{{ sidebar.foresta.trails }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rail-cta" style="margin-bottom:24px; font-family:var(--serif);">
+        <h3><i class="fa-regular fa-calendar" style="margin-right:6px;"></i>Calendario cittadino</h3>
+        <ul style="list-style:none; padding:0; margin:0; font-size:14px; line-height:1.4;">
+          {% for ev in sidebar.eventi %}
+          <li style="margin-bottom:12px; border-bottom:1px dashed var(--rule-soft); padding-bottom:6px; text-align:justify;">{{ ev }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="rail-cta" style="margin-bottom:24px; font-family:var(--serif);">
+        <h3><i class="fa-solid fa-tag" style="margin-right:6px;"></i>Annunci economici</h3>
+        <ul style="list-style:none; padding:0; margin:0; font-size:14px; line-height:1.4;">
+          {% for ann in sidebar.annunci %}
+          <li style="margin-bottom:12px; border-bottom:1px dashed var(--rule-soft); padding-bottom:6px; text-align:justify;">{{ ann }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="rail-cta" style="margin-bottom:24px; font-family:var(--serif);">
+        <h3><i class="fa-solid fa-star" style="margin-right:6px;"></i>Sheriff's Blotter</h3>
+        <div style="font-family:monospace; font-size:12px; line-height:1.45; text-align:justify; color:var(--ink-soft);">
+          <ul style="list-style:none; padding:0; margin:0;">
+            {% for b in sidebar.blotter %}
+            <li style="margin-bottom:12px; border-bottom:1px dashed var(--rule-soft); padding-bottom:6px;">{{ b }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="rail-cta" style="border:1px solid var(--rule); background:var(--paper-2); padding:16px 18px; margin-bottom:24px">
+        <div class="k" style="font-family:var(--label); text-transform:uppercase; letter-spacing:.16em; font-size:10.5px; color:var(--accent); margin-bottom:6px">Unisciti alla redazione</div>
+        <h4 style="font-family:var(--serif); font-weight:700; font-size:21px; line-height:1.1; margin:0 0 8px">Scrivi con noi</h4>
+        <p style="margin:0 0 12px; font-size:14px; color:var(--ink-soft); line-height:1.45">Il Salvation Herald è aperto a cronisti, freelance e cittadini che vogliano firmare un articolo o tenere una propria rubrica. Se hai una storia da raccontare, la valle ti ascolta.</p>
+        <a href="https://salvation.forumcommunity.net/?f=9146991" style="display:inline-block; font-family:var(--label); text-transform:uppercase; letter-spacing:.12em; font-size:11px; color:var(--paper); background:var(--accent); padding:8px 16px; text-decoration:none">Scrivi un pezzo</a>
+      </div>
+      <h3>Ultimi articoli</h3>
+      {% for post in remainingPosts.slice(0, 4) %}
       <div class="rail-item">
         <a href="{{ post.url }}">
           {% if post.data.section %}<div class="k">{{ post.data.section }}</div>{% endif %}
@@ -61,14 +143,54 @@ eleventyExcludeFromCollections: true
         </a>
       </div>
       {% endfor %}
+      
+      <div class="sports-recap" style="background-color: #1a3c26; color: #fff; border: 3px solid #e5d8b8; border-radius: 6px; padding: 15px; margin-bottom: 24px; font-family: var(--sans); box-shadow: 0 4px 6px rgba(0,0,0,0.15);">
+        <div style="text-align: center; border-bottom: 2px solid #e5d8b8; padding-bottom: 8px; margin-bottom: 12px;">
+          <div style="font-size: 24px; color: #e5d8b8; margin-bottom: 4px;"><i class="fa-solid fa-football"></i></div>
+          <div style="font-family: var(--serif); font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.1;">Salvation Bucks</div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: #a2c1a9;">Risultati Ufficiali</div>
+        </div>
+        <ul style="list-style:none; padding:0; margin:0; font-size:14px; line-height:1.4;">
+          {% for r in sidebar.recaps %}
+          <li style="margin-bottom: 8px; background: rgba(0,0,0,0.2); padding: 8px; text-align: center; font-weight: 600; border-radius: 3px; letter-spacing: 0.05em;">{{ r }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="ad-spl" style="background-color: #ffd700; color: #000; border: 4px solid #000; padding: 20px 15px; margin-bottom: 24px; text-align: center; font-family: var(--sans); box-shadow: 4px 4px 0px #000;">
+        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; margin-bottom: 4px;"><i class="fa-solid fa-bolt" style="font-size: 26px; margin-right: 4px;"></i>SP&L</div>
+        <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid #000; padding-bottom: 8px; margin-bottom: 12px;">Salvation Power & Light</div>
+        <p style="font-family: var(--serif); font-size: 16px; font-weight: 700; margin: 0 0 16px 0; line-height: 1.3;">Garantiamo la luce,<br>perché il buio <span style="background: #000; color: #ffd700; padding: 0 4px; display: inline-block; transform: skew(-5deg);">non è sicuro.</span></p>
+        <div style="background-color: #000; color: #fff; padding: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border: 2px solid #000;">Segnala un calo di tensione</div>
+      </div>
+
+      <div class="ad-twilight" style="background-color:#111; color:#eee; border: 4px double #555; padding: 20px 15px; margin-bottom: 24px; text-align: center; font-family: var(--serif); box-shadow: inset 0 0 10px #000;">
+        <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 5px;">Benvenuti al</div>
+        <div style="font-size: 22px; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; color: #fff; text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de;">Twilight<br><span style="font-size:14px; letter-spacing: 0.3em;">Picture House</span></div>
+        <div style="border-top: 1px dotted #555; border-bottom: 1px dotted #555; padding: 10px 0; margin: 15px 0;">
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; color:#aaa;">Oggi in programmazione</div>
+          <div style="font-size: 16px; font-weight: bold; color: #ffcc00; font-style: italic; line-height: 1.2;">{{ sidebar.film }}</div>
+        </div>
+        <div style="font-size: 10px; color: #666; letter-spacing: 0.1em; text-transform: uppercase;">Ammissione: 50&cent; &bull; Silenzio in sala</div>
+      </div>
+
+      <div class="ad-huntsman" style="background-color: #2b3a2a; color: #e4d7c5; border: 2px solid #1a241a; border-radius: 4px; padding: 18px 15px; margin-bottom: 24px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="position: absolute; top: -10px; left: -10px; opacity: 0.1; font-size: 80px;"><i class="fa-solid fa-mountain"></i></div>
+        <div style="position: relative; z-index: 1;">
+          <div style="font-family: var(--label); text-transform: uppercase; font-size: 10px; letter-spacing: 0.2em; margin-bottom: 5px; color: #a9b8a9;"><i class="fa-solid fa-crosshairs"></i> Forniture per l'aperto</div>
+          <div style="font-family: var(--serif); font-size: 19px; font-weight: 700; line-height: 1.1; margin-bottom: 10px; text-transform: uppercase; border-bottom: 1px solid rgba(228, 215, 197, 0.3); padding-bottom: 10px;">The Appalachian<br>Huntsman</div>
+          <p style="font-family: var(--serif); font-size: 13px; margin: 0 0 10px 0; line-height: 1.4; font-style: italic;">Attrezzatura di precisione per chi conosce davvero i nostri boschi.</p>
+          <div style="display: inline-block; background: #1a241a; color: #e4d7c5; padding: 4px 10px; font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 2px;">Non avventuratevi impreparati</div>
+        </div>
+      </div>
     </aside>
   </div>
   {% endif %}
 
-  {% if posts.length > 5 %}
+  {% if remainingPosts.length > 4 %}
   <hr class="divider">
   <div class="three">
-    {% for post in posts.slice(5, 8) %}
+    {% for post in remainingPosts.slice(4, 7) %}
     <article>
       {% if post.data.section %}<div class="k">{{ post.data.section }}</div>{% endif %}
       <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>
@@ -79,21 +201,13 @@ eleventyExcludeFromCollections: true
   </div>
   {% endif %}
 
-  <section class="archive" id="archive">
-    <h3>Dall&rsquo;Archivio &mdash; Edizioni Precedenti</h3>
-    <div class="arch-list">
-      {% for post in posts %}
-      <div class="arch-row">
-        <span class="date">{{ post.date | shortDate }}</span>
-        <span class="t"><a href="{{ post.url }}">{{ post.data.title }}{% if post.data.section %}<span class="sec">{{ post.data.section }}</span>{% endif %}</a></span>
-      </div>
-      {% endfor %}
-    </div>
+  <section class="archive" id="archive" style="text-align: center; margin-bottom: 20px;">
+    <a href="/archivio/" style="display:inline-block; font-family:var(--label); text-transform:uppercase; letter-spacing:.12em; font-size:13px; color:var(--paper); background:var(--ink); padding:12px 24px; text-decoration:none;">Ricerca nell'Archivio Completo</a>
   </section>
 
   <footer class="paper">
-    <div>{{ site.name }} &middot; <span class="em">{{ site.place }}</span> &middot; Contea di {{ site.county }}</div>
-    <div>Pubblicato dal {{ site.founded }} &middot; Lettere alla redazione: {{ site.email }}</div>
+    <div>{{ site.name }} &middot; <span class="em">{{ site.place }}</span> &middot; City-County of {{ site.county }}</div>
+    <div>Pubblicato dal {{ site.founded }} &middot; Lettere alla redazione: {{ site.email }} &middot; <a href="/feed.xml" style="color:inherit; text-decoration:underline;">Iscriviti al Feed RSS</a></div>
   </footer>
 
 </div>
@@ -116,34 +230,83 @@ eleventyExcludeFromCollections: true
     95: "Temporale", 96: "Temporale con grandine", 99: "Temporale forte con grandine"
   };
 
-  // Data odierna reale, in italiano con iniziali maiuscole.
-  function capWords(s){ return s.replace(/(^|\s)\S/g, function(m){ return m.toUpperCase(); }); }
+  // Data odierna reale
   var dateEl = document.getElementById("slv-date");
   try {
     var today = new Date().toLocaleDateString("it-IT", {
       weekday: "long", year: "numeric", month: "long", day: "numeric",
       timeZone: "America/New_York"
     });
-    dateEl.textContent = capWords(today);
+    dateEl.textContent = today; // No title case!
   } catch (e) {
     if (dateEl.dataset.fallback) dateEl.textContent = dateEl.dataset.fallback;
   }
 
-  // Meteo reale attuale via Open-Meteo (senza chiave).
-  var url = "https://api.open-meteo.com/v1/forecast?latitude=" + LAT +
-            "&longitude=" + LON +
-            "&current=temperature_2m,weather_code&temperature_unit=fahrenheit" +
-            "&timezone=America/New_York";
-  fetch(url)
-    .then(function (r) { return r.json(); })
-    .then(function (d) {
-      var t = Math.round(d.current.temperature_2m);
-      var code = d.current.weather_code;
-      var desc = WMO[code] || "—";
-      document.getElementById("slv-weather").textContent = desc + ", " + t + "°F";
-    })
-    .catch(function () {
-      document.getElementById("slv-weather").textContent = "dati non disponibili";
-    });
+  // Caching locale per evitare cambi repentini (4 ore)
+  var cacheKey = "slv_weather_cache";
+  var cacheTime = "slv_weather_time";
+  var now = new Date().getTime();
+  var savedWeather = localStorage.getItem(cacheKey);
+  var savedTime = localStorage.getItem(cacheTime);
+
+  if (savedWeather && savedTime && (now - savedTime < 4 * 60 * 60 * 1000)) {
+    document.getElementById("slv-weather").textContent = savedWeather;
+  } else {
+    var url = "https://api.open-meteo.com/v1/forecast?latitude=" + LAT +
+              "&longitude=" + LON +
+              "&current=temperature_2m,weather_code&temperature_unit=celsius" +
+              "&timezone=America/New_York";
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        var t = Math.round(d.current.temperature_2m);
+        var code = d.current.weather_code;
+        var desc = WMO[code] || "—";
+        var weatherString = desc + ", " + t + "°C";
+        document.getElementById("slv-weather").textContent = weatherString;
+        localStorage.setItem(cacheKey, weatherString);
+        localStorage.setItem(cacheTime, now);
+      })
+      .catch(function () {
+        document.getElementById("slv-weather").textContent = "dati non disponibili";
+      });
+  }
+
+  // Calcolo fase lunare
+  function getMoonPhase() {
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    if (month < 3) { year--; month += 12; }
+    let a = Math.floor(year / 100);
+    let b = Math.floor(a / 4);
+    let c = 2 - a + b;
+    let e = Math.floor(365.25 * (year + 4716));
+    let f = Math.floor(30.6001 * (month + 1));
+    let jd = c + day + e + f - 1524.5;
+    let daysSinceNew = jd - 2451549.5;
+    let newMoons = daysSinceNew / 29.53;
+    let fraction = newMoons - Math.floor(newMoons);
+    let age = Math.round(fraction * 29.53);
+    
+    let phaseName = "";
+    let icon = "";
+    if (age === 0 || age === 29) { phaseName = "luna nuova"; icon = "fa-moon"; }
+    else if (age > 0 && age < 7) { phaseName = "luna crescente"; icon = "fa-moon"; } 
+    else if (age === 7 || age === 8) { phaseName = "primo quarto"; icon = "fa-circle-half-stroke"; }
+    else if (age > 8 && age < 14) { phaseName = "gibbosa crescente"; icon = "fa-circle"; }
+    else if (age === 14 || age === 15) { phaseName = "luna piena"; icon = "fa-circle"; }
+    else if (age > 15 && age < 22) { phaseName = "gibbosa calante"; icon = "fa-circle"; }
+    else if (age === 22 || age === 23) { phaseName = "ultimo quarto"; icon = "fa-circle-half-stroke fa-flip-horizontal"; }
+    else { phaseName = "luna calante"; icon = "fa-moon fa-flip-horizontal"; }
+    
+    return `<i class="fa-solid ${icon}" style="margin-right:4px;"></i> ${phaseName}`;
+  }
+  
+  var moonWidget = document.getElementById('moon-phase-widget');
+  if (moonWidget) {
+    moonWidget.innerHTML = getMoonPhase();
+  }
 })();
 </script>

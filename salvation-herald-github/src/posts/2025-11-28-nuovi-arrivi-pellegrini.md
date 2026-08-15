@@ -3,11 +3,11 @@ title: "Salvation oltre il \"tutto esaurito\": i nuovi arrivi"
 date: 2025-11-28
 author: Willow Austin
 filed: 28 novembre 2025
-section: Cronaca
-deck: "Dall'Hackett's Camp fino al centro, la città registra un afflusso di visitatori senza precedenti. Il Municipio rassicura: «Siamo vittime del nostro successo e della crisi immobiliare globale. Un fenomeno anomalo, ma temporaneo — e, per il commercio, persino un'opportunità»."
+section: Comunità
+deck: "Dall'Hackett's Camp fino al centro, la città registra un afflusso di visitatori senza precedenti. Il Municipio rassicura: «Siamo vittime del nostro successo e della crisi immobiliare globale. Un fenomeno anomalo, ma temporaneo – e, per il commercio, persino un'opportunità»."
 image: "https://i.imgur.com/LZ0RmzD.jpeg"
 imageAlt: "Il pienone di camper e tende vicino all'Hackett's Camp"
-imageCaption: "Il pienone di camper e tende ai margini dell'Hackett's Camp. — Herald photo"
+imageCaption: "Il pienone di camper e tende ai margini dell'Hackett's Camp. – Herald photo"
 ---
 
 Se nell'ultima settimana avete provato a parcheggiare in Main Street, o a prenotare un tavolo da Martha's, ve ne sarete accorti: Salvation non è più la tranquilla cittadina di montagna di un tempo. Un numero senza precedenti di visitatori ha raggiunto la nostra valle, trasformando l'Hackett's Camp in una vera cittadella di camper e tende che si spinge ormai fino al limitare dei boschi, e riducendo ogni piazzola di sosta lungo la Statale a un dormitorio improvvisato.
@@ -16,9 +16,9 @@ I residenti li hanno già ribattezzati "i pellegrini", un termine che rende bene
 
 <figure class="article-figure">
   <img src="https://i.imgur.com/lqTiEaI.jpeg" alt="Pellegrini in fila al McFarland Grocery">
-  <figcaption>Pellegrini in fila al McFarland Grocery, dove gli scaffali si svuotano in fretta. — Herald photo</figcaption>
+  <figcaption>Pellegrini in fila al McFarland Grocery, dove gli scaffali si svuotano in fretta. – Herald photo</figcaption>
 </figure>
 
-L'impennata improvvisa della popolazione ha portato, prevedibilmente, qualche frizione: scaffali che si svuotano in fretta, file lunghe al distributore e al McFarland Grocery, e la presenza di qualche figura eccentrica — artisti in cerca d'ispirazione notturna, o persone dal sonno difficile che vagano per le strade a ore insolite — che ha messo in allarme alcuni residenti storici. Lo sceriffo Alden Locke ha voluto rassicurare la città con una dichiarazione ferma. «Siamo consapevoli del sovraffollamento e delle preoccupazioni sulla sicurezza. Abbiamo potenziato i pattugliamenti notturni per gestire sia l'ordine pubblico sia le violazioni di proprietà privata. Salvation è accogliente, ma la legge vale per tutti, turisti o residenti. Chiunque venga trovato a occupare abusivamente strutture o a disturbare la quiete pubblica sarà allontanato.»
+L'impennata improvvisa della popolazione ha portato, prevedibilmente, qualche frizione: scaffali che si svuotano in fretta, file lunghe al distributore e al McFarland Grocery, e la presenza di qualche figura eccentrica – artisti in cerca d'ispirazione notturna, o persone dal sonno difficile che vagano per le strade a ore insolite – che ha messo in allarme alcuni residenti storici. Lo sceriffo Alden Locke ha voluto rassicurare la città con una dichiarazione ferma. «Siamo consapevoli del sovraffollamento e delle preoccupazioni sulla sicurezza. Abbiamo potenziato i pattugliamenti notturni per gestire sia l'ordine pubblico sia le violazioni di proprietà privata. Salvation è accogliente, ma la legge vale per tutti, turisti o residenti. Chiunque venga trovato a occupare abusivamente strutture o a disturbare la quiete pubblica sarà allontanato.»
 
-Dal Municipio, l'invito è alla pazienza. «Stiamo gestendo un fenomeno demografico anomalo, ma temporaneo», assicurano dagli uffici comunali. «Lavoriamo per predisporre soluzioni abitative d'emergenza, ma chiediamo ai residenti di segnalare eventuali situazioni sospette senza intervenire di persona.» E, aggiungono, non manca il lato positivo: «Molti di questi pellegrini portano lavoro alle nostre attività commerciali. È un momento di crescita, per quanto caotico.» Una lettura che il Salvation Herald condivide: un afflusso straordinario, sì, ma dalle cause chiare — il richiamo turistico della valle e la difficile congiuntura immobiliare del Paese — e destinato a rientrare non appena la stagione e il mercato torneranno alla normalità.
+Dal Municipio, l'invito è alla pazienza. «Stiamo gestendo un fenomeno demografico anomalo, ma temporaneo», assicurano dagli uffici comunali. «Lavoriamo per predisporre soluzioni abitative d'emergenza, ma chiediamo ai residenti di segnalare eventuali situazioni sospette senza intervenire di persona.» E, aggiungono, non manca il lato positivo: «Molti di questi pellegrini portano lavoro alle nostre attività commerciali. È un momento di crescita, per quanto caotico.» Una lettura che il Salvation Herald condivide: un afflusso straordinario, sì, ma dalle cause chiare – il richiamo turistico della valle e la difficile congiuntura immobiliare del Paese – e destinato a rientrare non appena la stagione e il mercato torneranno alla normalità.

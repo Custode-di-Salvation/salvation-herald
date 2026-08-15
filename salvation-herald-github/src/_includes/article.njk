@@ -8,7 +8,7 @@ layout: base.njk
     <span>{{ site.place }} &middot; {{ site.volume }} {{ site.issue }} &middot; {{ date | shortDate }}</span>
   </div>
 
-  <div class="backbar"><a href="/">&larr; Torna alla Prima Pagina</a>{% if section %} &nbsp;&middot;&nbsp; {{ section }}{% endif %}</div>
+  <div class="backbar"><a href="/">&larr; Torna alla prima pagina</a>{% if section %} &nbsp;&middot;&nbsp; {{ section }}{% endif %}</div>
 
   <article>
     {% if section %}<div class="eyebrow">{{ section }}</div>{% endif %}
@@ -33,8 +33,8 @@ layout: base.njk
   </article>
 
   <footer class="paper">
-    <div>{{ site.name }} &middot; {{ site.place }} &middot; Contea di {{ site.county }}</div>
-    <div>Pubblicato dal {{ site.founded }} &middot; <a href="/">Torna alla Prima Pagina</a></div>
+    <div>{{ site.name }} &middot; {{ site.place }} &middot; City-County of {{ site.county }}</div>
+    <div>Pubblicato dal {{ site.founded }} &middot; <a href="/">Torna alla prima pagina</a> &middot; <a href="/feed.xml" style="color:inherit; text-decoration:underline;">Iscriviti al feed RSS</a></div>
   </footer>
 
 </div>

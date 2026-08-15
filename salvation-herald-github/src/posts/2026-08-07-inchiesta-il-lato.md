@@ -7,7 +7,7 @@ section: Cronaca
 deck: "Per una settimana il nostro inviato ha vissuto dentro l'insediamento che ha inghiottito il vecchio campo estivo sul Cauldron Lake. Ne torna con un quadro che nulla ha di misterioso e molto di preoccupante: baraccopoli, abusivismo, un mercato nero di armi e farmaci, e una comunità chiusa che non risponde a nessuna legge se non alla propria."
 image: "https://i.imgur.com/ntM8HW6.jpeg"
 imageAlt: "L'insediamento del Lato tra i boschi, ex Hackett's Camp"
-imageCaption: "L'ingresso del cosiddetto \"Lato\", sorto sull'area del vecchio Hackett's Camp. — Herald photo"
+imageCaption: "L'ingresso del cosiddetto \"Lato\", sorto sull'area del vecchio Hackett's Camp. – Herald photo"
 ---
 
 Fino a tre anni fa era il Salvation Hackett's Summer Camp: un campo estivo fondato dalla famiglia Hackett nel 1953, dieci cabine di tronchi disposte attorno a una quercia secolare, un pontile sul lago, i sentieri per le escursioni dei ragazzi. Oggi quel nome non lo usa più nessuno. La proprietà appartiene ancora, sulla carta, agli Hackett, che però hanno da tempo abbandonato un campo diventato ingestibile. Al suo posto è cresciuto altro. I nostri concittadini lo chiamano ormai con un'espressione eloquente: il Lato.

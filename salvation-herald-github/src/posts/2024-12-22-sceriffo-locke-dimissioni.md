@@ -4,15 +4,15 @@ date: 2024-12-22
 author: Eleanor Cash
 filed: 22 dicembre 2024
 section: Cronaca
-deck: "Dopo vent'anni di onorato servizio e un lungo congedo, lo sceriffo Richard Locke ha rassegnato le dimissioni, lasciando la contea di Salvation senza il volto che per due decenni ne aveva incarnato la legge."
+deck: "Dopo vent'anni di onorato servizio e un lungo congedo, lo sceriffo Richard Locke ha rassegnato le dimissioni, lasciando la City-County of Salvation senza il volto che per due decenni ne aveva incarnato la legge."
 image: "https://images-cdn.bridgemanimages.com/api/1.0/image/150.XXX.29547020.7055475/2071413.jpg"
 imageAlt: "Richard Locke, ex sceriffo"
-imageCaption: "Richard Locke ritratto negli anni del suo mandato. — Archivio Herald"
+imageCaption: "Richard Locke ritratto negli anni del suo mandato. – Archivio Herald"
 ---
 
 La notizia è arrivata poco prima di Natale, in una di quelle mattine in cui la nebbia non lascia il fondovalle fino a mezzogiorno, e ha attraversato Salvation più in fretta di qualsiasi comunicato. Al banco della drogheria sulla piazza, come tra le panche della Grace Chapel, il nome ripetuto era uno solo: Richard Locke, lo sceriffo, non c'è più dietro quella scrivania.
 
-Per vent'anni Locke è stato il volto della sicurezza e della giustizia nella contea di Salvation. Eletto per la prima volta a cavallo del millennio e riconfermato dai suoi concittadini elezione dopo elezione, ha attraversato inverni durissimi, piene del fiume, notti in cui l'unica luce accesa in centro era quella del suo ufficio. La sua figura è rimasta legata a episodi di sangue freddo e a interventi decisivi nei momenti di emergenza, che gli sono valsi il rispetto dei cittadini e dei colleghi delle contee vicine.
+Per vent'anni Locke è stato il volto della sicurezza e della giustizia nella City-County of Salvation. Eletto per la prima volta a cavallo del millennio e riconfermato dai suoi concittadini elezione dopo elezione, ha attraversato inverni durissimi, piene del fiume, notti in cui l'unica luce accesa in centro era quella del suo ufficio. La sua figura è rimasta legata a episodi di sangue freddo e a interventi decisivi nei momenti di emergenza, che gli sono valsi il rispetto dei cittadini e dei colleghi delle contee vicine.
 
 Le dimissioni arrivano al termine di un lungo periodo di congedo temporaneo che, negli ultimi mesi, aveva già affidato la gestione quotidiana del dipartimento ai suoi vice. Le prime indiscrezioni parlano di un rapido declino cognitivo, attribuito all'avanzare dell'età, che avrebbe minato la sua capacità di reggere il peso della carica. Voci non confermate ufficialmente, ma che trovano un possibile riscontro nella recente, tragica scomparsa della moglie: un lutto che, secondo fonti vicine alla famiglia, avrebbe accelerato il deterioramento delle sue condizioni. Chi lo conosceva bene racconta di un uomo diventato più silenzioso, che aveva smesso di fare il giro delle strade la sera come era sua abitudine. In una contea dove tutti conoscono tutti, quel silenzio è stato notato, e ha pesato.
 
