@@ -4,3 +4,13 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[headers]]
+  for = "/search.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
