@@ -6,11 +6,13 @@ eleventyExcludeFromCollections: true
 {% set posts = collections.articles %}
 {% set lead = posts[0] %}
 <div class="sheet">
+
   <div class="top-strip">
     <span>{{ site.volume }} &middot; {{ site.issue }}</span>
     <span>Fondato nel {{ site.founded }} &middot; Contea di {{ site.county }}</span>
     <span>Prezzo {{ site.price }}</span>
   </div>
+
   <header class="masthead">
     <div class="kicker">{{ site.kicker }}</div>
     <h1><a href="/">{{ site.name }}</a></h1>
@@ -21,6 +23,7 @@ eleventyExcludeFromCollections: true
       <span class="weather">Oggi &mdash; <b id="slv-weather">&mdash;</b></span>
     </div>
   </header>
+
   <nav class="sections">
     <span>Prima Pagina</span>
     <span>Cronaca</span>
@@ -30,6 +33,7 @@ eleventyExcludeFromCollections: true
     <span>Opinioni</span>
     <span>Archivio</span>
   </nav>
+
   {% if lead %}
   <div class="lead-grid">
     <div class="main">
@@ -45,16 +49,9 @@ eleventyExcludeFromCollections: true
       {% endif %}
       <div class="body-cols">{{ lead.templateContent | safe }}</div>
     </div>
+
     <aside class="rail">
-
-      <div class="rail-cta" style="border:1px solid var(--rule); background:var(--paper-2); padding:16px 18px; margin-bottom:24px">
-        <div class="k" style="font-family:var(--label); text-transform:uppercase; letter-spacing:.16em; font-size:10.5px; color:var(--accent); margin-bottom:6px">Unisciti alla redazione</div>
-        <h4 style="font-family:var(--serif); font-weight:700; font-size:21px; line-height:1.1; margin:0 0 8px">Scrivi con noi</h4>
-        <p style="margin:0 0 12px; font-size:14px; color:var(--ink-soft); line-height:1.45">Il Salvation Herald è aperto a cronisti, freelance e cittadini che vogliano firmare un articolo o tenere una propria rubrica. Se hai una storia da raccontare, la valle ti ascolta.</p>
-        <a href="https://salvation.forumcommunity.net/?f=9146991" style="display:inline-block; font-family:var(--label); text-transform:uppercase; letter-spacing:.12em; font-size:11px; color:var(--paper); background:var(--accent); padding:8px 16px; text-decoration:none">Scrivi un pezzo</a>
-      </div>
-
-      <h3>Ultimi articoli</h3>
+      <h3>Questa Settimana</h3>
       {% for post in posts.slice(1, 5) %}
       <div class="rail-item">
         <a href="{{ post.url }}">
@@ -67,6 +64,7 @@ eleventyExcludeFromCollections: true
     </aside>
   </div>
   {% endif %}
+
   {% if posts.length > 5 %}
   <hr class="divider">
   <div class="three">
@@ -80,6 +78,7 @@ eleventyExcludeFromCollections: true
     {% endfor %}
   </div>
   {% endif %}
+
   <section class="archive" id="archive">
     <h3>Dall&rsquo;Archivio &mdash; Edizioni Precedenti</h3>
     <div class="arch-list">
@@ -91,14 +90,19 @@ eleventyExcludeFromCollections: true
       {% endfor %}
     </div>
   </section>
+
   <footer class="paper">
     <div>{{ site.name }} &middot; <span class="em">{{ site.place }}</span> &middot; Contea di {{ site.county }}</div>
     <div>Pubblicato dal {{ site.founded }} &middot; Lettere alla redazione: {{ site.email }}</div>
   </footer>
+
 </div>
+
 <script>
 (function () {
   var LAT = {{ site.lat }}, LON = {{ site.lon }};
+
+  // Descrizioni meteo (codici WMO) in italiano.
   var WMO = {
     0: "Sereno", 1: "Prevalentemente sereno", 2: "Parz. nuvoloso", 3: "Coperto",
     45: "Nebbia", 48: "Nebbia gelata",
@@ -111,6 +115,8 @@ eleventyExcludeFromCollections: true
     85: "Rovesci di neve", 86: "Rovesci di neve intensi",
     95: "Temporale", 96: "Temporale con grandine", 99: "Temporale forte con grandine"
   };
+
+  // Data odierna reale, in italiano con iniziali maiuscole.
   function capWords(s){ return s.replace(/(^|\s)\S/g, function(m){ return m.toUpperCase(); }); }
   var dateEl = document.getElementById("slv-date");
   try {
@@ -122,9 +128,11 @@ eleventyExcludeFromCollections: true
   } catch (e) {
     if (dateEl.dataset.fallback) dateEl.textContent = dateEl.dataset.fallback;
   }
+
+  // Meteo reale attuale via Open-Meteo (senza chiave).
   var url = "https://api.open-meteo.com/v1/forecast?latitude=" + LAT +
             "&longitude=" + LON +
-            "&current=temperature_2m,weather_code&temperature_unit=celsius" +
+            "&current=temperature_2m,weather_code&temperature_unit=fahrenheit" +
             "&timezone=America/New_York";
   fetch(url)
     .then(function (r) { return r.json(); })
@@ -132,7 +140,7 @@ eleventyExcludeFromCollections: true
       var t = Math.round(d.current.temperature_2m);
       var code = d.current.weather_code;
       var desc = WMO[code] || "—";
-      document.getElementById("slv-weather").textContent = desc + ", " + t + "°C";
+      document.getElementById("slv-weather").textContent = desc + ", " + t + "°F";
     })
     .catch(function () {
       document.getElementById("slv-weather").textContent = "dati non disponibili";

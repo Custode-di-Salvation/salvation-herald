@@ -10,7 +10,7 @@ imageAlt: "Richard Locke, ex sceriffo"
 imageCaption: "Richard Locke ritratto negli anni del suo mandato. — Archivio Herald"
 ---
 
-La notizia è arrivata poco prima di Natale, in una di quelle mattine in cui la nebbia non lascia il fondovalle fino a mezzogiorno, e ha attraversato Salvation più in fretta di qualsiasi comunicato. Al banco della drogheria sulla piazza, come tra le panche della nostra chiesa, il nome ripetuto era uno solo: Richard Locke, lo sceriffo, non c'è più dietro quella scrivania.
+La notizia è arrivata poco prima di Natale, in una di quelle mattine in cui la nebbia non lascia il fondovalle fino a mezzogiorno, e ha attraversato Salvation più in fretta di qualsiasi comunicato. Al banco della drogheria sulla piazza, come tra le panche della Grace Chapel, il nome ripetuto era uno solo: Richard Locke, lo sceriffo, non c'è più dietro quella scrivania.
 
 Per vent'anni Locke è stato il volto della sicurezza e della giustizia nella contea di Salvation. Eletto per la prima volta a cavallo del millennio e riconfermato dai suoi concittadini elezione dopo elezione, ha attraversato inverni durissimi, piene del fiume, notti in cui l'unica luce accesa in centro era quella del suo ufficio. La sua figura è rimasta legata a episodi di sangue freddo e a interventi decisivi nei momenti di emergenza, che gli sono valsi il rispetto dei cittadini e dei colleghi delle contee vicine.
 

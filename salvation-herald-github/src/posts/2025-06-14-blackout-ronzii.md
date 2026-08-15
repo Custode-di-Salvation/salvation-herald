@@ -4,8 +4,8 @@ date: 2025-06-14
 author: Robin Schuman
 filed: 14 giugno 2025
 section: Cronaca
-deck: "Da settimane Salvation fa i conti con blackout insolitamente frequenti e regolari, accompagnati da un basso ronzio percepibile nell'aria. La Salvation Power & Light parla di trasformatori vecchi e relè di protezione. Alcuni residenti non sono così sicuri."
-image: "https://imgur.com/BhG4aLB.png"
+deck: "Da settimane Salvation fa i conti con blackout insolitamente frequenti, accompagnati da un basso ronzio nell'aria. La Salvation Power & Light spiega: trasformatori di vecchia generazione e relè di protezione. Nulla di cui allarmarsi, assicurano la società e le autorità."
+image: "https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?auto=format&fit=crop&w=1000&q=60"
 imageAlt: "Un quartiere residenziale al buio durante un blackout"
 imageCaption: "Salvation Ridge al buio durante una delle interruzioni. — Herald photo"
 ---
@@ -16,4 +16,4 @@ Un portavoce della SP&L ha provato a rassicurare la comunità. «Siamo consapevo
 
 Sulla stessa linea lo sceriffo Alden Locke, che ha voluto togliere ogni drammatizzazione. «Comprendiamo le preoccupazioni dei cittadini per queste interruzioni inusuali, ma voglio ribadire che si tratta di fenomeni tecnici e non di alcun rischio per la sicurezza pubblica. Le nostre squadre sono in costante contatto con la SP&L e siamo fiduciosi che la situazione tornerà presto alla normalità.»
 
-La società ha nel frattempo avviato un programma di manutenzione straordinaria e di sostituzione preventiva dei componenti più datati, con l'obiettivo di stabilizzare la rete nel giro di poche settimane. Ai residenti si chiede di segnalare ogni anomalia e, insieme, di non dare credito a voci non verificate. Un invito che, in una città come Salvation, suona sempre un po' come una promessa e un po' come un avvertimento: perché il ronzio, spiegazioni o no, la sera continua a sentirsi.
+La società ha nel frattempo avviato un programma di manutenzione straordinaria e di sostituzione preventiva dei componenti più datati, con l'obiettivo di stabilizzare completamente la rete nel giro di poche settimane. Nel frattempo, fanno sapere la SP&L e il dipartimento dello sceriffo, non c'è alcun motivo di preoccupazione: si tratta di un normale disagio tecnico, in via di risoluzione. Ai residenti si chiede soltanto di segnalare eventuali guasti attraverso i canali ufficiali e di non dare credito a voci prive di fondamento. Il Salvation Herald, come sempre, seguirà la vicenda fino al pieno ripristino del servizio.
