@@ -80,6 +80,7 @@ section: "Costume"
 tags: ["article"]
 hideFromHome: true
 date: ${year}-${month}-01
+permalink: "/oroscopo/${year}-${month}/"
 ---
 
 Benritrovati, cari concittadini. Le configurazioni astrali di questo mese ci invitano alla prudenza e alla razionalità. Come sempre, ricordo a tutti che l'astrologia è una guida, ma il vero artefice del proprio destino è chi sa tenere i piedi ben piantati a terra, lontano da sterili superstizioni.
